@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+  signupData = {
+    email: '',
+    password: '',
+    confirmPassword: ''
+  };
 
+  onSignupSubmit() {
+    console.log('Signup Data', this.signupData);
+  }
 }
