@@ -32,6 +32,11 @@ ul {
   .active {
     background-color: #04AA6D;
   }
+
+  input{
+    display:flex;
+    
+  }
   
   /* Add padding to the content to avoid overlapping with the fixed navbar */
  

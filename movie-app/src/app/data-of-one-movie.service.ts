@@ -11,6 +11,7 @@ export class DataServiceOfOneMovie {
 
   constructor(private http: HttpClient) { }
 
+  
   fetchData(movieId:any): Observable<any> {
     const url = `${this.apiUrl}/${movieId}?api_key=${this.apiKey}`;
     return this.http.get(url);
