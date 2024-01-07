@@ -1,15 +1,18 @@
 <link href="navbar.component.css">
-<ul>
-    <li>
-        <a routerLink="/home">Home</a>
-    </li>
-    <li>
-        <a routerLink="/login">Login</a>
-    </li>
-    <li>
-        <a routerLink="/booking">Booking</a>
-    </li>
-    <li>
-        <a routerLink="/signup">Signup</a>
-    </li>
-</ul>
+
+        <ul>
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li>
+                <a routerLink="/login">Login</a>
+            </li>
+            <li>
+                <a routerLink="/booking">Booking</a>
+            </li>
+            <li>
+                <a routerLink="/signup">Signup</a>
+            </li>
+        
+            <input type="text" id="search" [(ngModel)]="searchTerm" (input)="onSearchInput()">
+        </ul>
