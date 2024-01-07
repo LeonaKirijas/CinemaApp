@@ -1,0 +1,14 @@
+*{
+    padding-top: 60px;
+}
+img {
+    width: 20%;
+    float: left;
+    margin-right: 20px;
+    margin-left: 60px;;
+  }
+  
+  .text-container {
+    
+    margin-left: 20px;
+  }

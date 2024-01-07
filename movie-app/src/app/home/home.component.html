@@ -1,4 +1,15 @@
-<div *ngIf="data">
-    Replace with your specific data structure
-    <p>{{ data | json }}</p>
+<link class="content" href="home.component.css">
+
+<div *ngIf="data" class="movie-grid">
+  <div *ngFor="let movie of data.results" class="movie-item" >
+    <div (click)="navigateToShowMovie(movie)">
+     
+      <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.original_title }} Poster" >
+     
+      <p class="movie-title">{{ movie.original_title }}</p>
+
+    </div>
+  </div>
 </div>
+
+

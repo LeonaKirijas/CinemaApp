@@ -1,0 +1,15 @@
+<link href="show-movie.component.css">
+<div *ngIf="movie">
+
+    <img class="image-container" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.original_title }} Poster" >
+    <div class="text-container">
+    
+    <p>{{ movie.original_title }}</p>
+    <p>{{ movie.overview }}</p>
+    <p>Release Date: {{ movie.release_date }}</p>
+
+  </div>
+
+
+</div>
+  

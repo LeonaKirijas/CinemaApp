@@ -10,6 +10,8 @@ import { BookingComponent } from './booking/booking.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowMovieComponent } from './Content/show-movie/show-movie.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     BookingComponent,
-    NavbarComponent
+    NavbarComponent,
+    ShowMovieComponent,
+
   ],
   imports: [
     BrowserModule,

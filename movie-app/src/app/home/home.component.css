@@ -1,0 +1,33 @@
+  .movie-grid {
+   
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 50px;
+    padding-top: 80px; 
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .movie-item:hover {
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+    
+  }
+  
+  .movie-item {
+    transition-duration: 500ms;
+    text-align: center;
+  }
+  
+  .movie-poster {
+    width: 60%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .movie-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 1px;
+    font-size: 14px;
+  }
+
