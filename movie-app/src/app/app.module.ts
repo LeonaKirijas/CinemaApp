@@ -15,6 +15,7 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { LogoutComponent } from './logout/logout.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { BookMovieComponent } from './Content/book-movie/book-movie.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { BookMovieComponent } from './Content/book-movie/book-movie.component';
     LogoutComponent,
     UserProfileComponent,
     BookMovieComponent,
+    ProfileComponent,
 
   ],
   imports: [

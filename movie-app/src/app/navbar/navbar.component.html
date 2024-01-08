@@ -7,9 +7,11 @@
             <li>
                 <a routerLink="/booking">Booking</a>
             </li>
-            <li>
-                <a routerLink="/signup">Signup</a>
+            <li class="img-user">
+                <a routerLink="/profile">
+                    <img src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="">
+                </a>
             </li>
         
-            <input type="text" id="search" [(ngModel)]="searchTerm" (input)="onSearchInput()">
+            <input type="text" id="search" [(ngModel)]="searchTerm" (input)="onSearchInput()" placeholder="Search Movies...">
         </ul>

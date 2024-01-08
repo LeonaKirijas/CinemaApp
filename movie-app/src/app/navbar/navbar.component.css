@@ -6,10 +6,10 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
+    position: relative;
+    top: -8px;
+    width: 100.86%;
+    left: -8px;
   }
   
   li {
@@ -34,9 +34,22 @@ ul {
   }
 
   input{
-    display:flex;
-    
+    position: absolute;
+    right: 174px;
+    top: 11px;
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
   }
-  
+  .img-user{
+    position: absolute;
+    right: 104px;
+    top: -5px;
+  }
+
+  .img-user img{
+    width: 30px;
+    height: 30px;
+  }
   /* Add padding to the content to avoid overlapping with the fixed navbar */
  
