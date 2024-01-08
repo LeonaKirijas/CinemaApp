@@ -7,6 +7,7 @@ import { BookingComponent } from './booking/booking.component';
 import { ShowMovieComponent } from './Content/show-movie/show-movie.component';
 import { LogoutComponent } from './logout/logout.component';
 import { BookMovieComponent } from './Content/book-movie/book-movie.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'booking', component: BookingComponent},
   {path: 'info/:id', component: ShowMovieComponent},
+  {path: 'profile', component: ProfileComponent},
   {path: 'book/:id', component: BookMovieComponent}
 ];
 
