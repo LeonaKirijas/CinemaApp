@@ -1,1 +1,10 @@
-<p>booking works!</p>
+<link class="content" href="booking.component.css">
+
+<div *ngIf="filteredData" class="movie-grid">
+  <div *ngFor="let movie of filteredData" class="movie-item">
+    <div (click)="navigateToBookMovie(movie)">
+      <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.original_title }} Poster">
+      <p class="movie-title">{{ movie.original_title }}</p>
+    </div>
+  </div>
+</div>
