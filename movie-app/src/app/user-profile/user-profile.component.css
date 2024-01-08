@@ -1,0 +1,149 @@
+ul{
+    position: absolute;
+    top: 250px;
+}
+
+.cantainer{
+    border-radius: 5px;
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+    margin: 20px auto;
+}
+.main{
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.profile{
+    width: 400px;
+    height: 400px;
+    background: #fafafa;
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+.viwer{
+    width: 150px;
+    height: 400px;
+    background: yellow;
+}
+.boxall{
+    display: flex;
+background: #F5E8DF;
+height: 132px;
+width: 100%;
+border-bottom: 2px solid #fff;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: #786450;
+transition: all 0.4s ease-in-out;
+}
+.img {
+width: 130px;
+height: 130px;
+border-radius: 50%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+position: relative;
+
+}
+.img img{
+    border-radius: 50%;
+}
+.img:hover{
+ cursor: pointer;
+}
+.img:before,.img:after {
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+border: 1px solid;
+border-radius: 50%;
+ transition:all 1.5s ease-in-out;
+ border-color: #786450 transparent #786450 #786450;
+}
+.img:after{
+rotate:180deg;
+}
+.img:before{
+left: -5px;
+top: -5px;
+bottom: -5px;
+right: -5px;
+}
+.img:hover:after{
+  transform:rotate(360deg);
+}
+.img:hover:before{
+transform:rotate(-360deg); 
+}
+img {
+width: 110px;
+height: 110px;
+}
+.pro-im-na {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #786475;
+margin-top: 20px;
+}
+.alltion {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.btn {
+display: block;
+width: 210px;
+height: 30px;
+margin: 0 auto 10px auto;
+background: none;
+border: 1px solid #786450;
+border-radius: 15px;
+font-size: 12px;
+font-weight: 600;
+box-sizing: border-box;
+transition: all 0.3s ease-in-out;
+color: #786450;
+cursor:pointer;
+}
+.btn:hover{
+color: #fff;
+background: #786450;
+}
+.name {
+margin-top: 30px;
+font-weight: 600;
+font-size: 16px;
+}
+.value {
+font-size: 18px;
+font-weight: 600;
+}
+.parameter {
+font-size: 11px;
+}
+.boxall:hover {
+background: #E1CFC2;
+cursor: pointer;
+}
+h2{
+text-align: center;
+padding: 10px 0 0;
+color: #fff;
+}
