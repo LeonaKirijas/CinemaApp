@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShowMovieComponent } from './Content/show-movie/show-movie.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { LogoutComponent } from './logout/logout.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { LogoutComponent } from './logout/logout.component';
     NavbarComponent,
     ShowMovieComponent,
     LogoutComponent,
+    UserProfileComponent,
 
   ],
   imports: [
