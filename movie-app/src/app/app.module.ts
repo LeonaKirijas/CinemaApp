@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowMovieComponent } from './Content/show-movie/show-movie.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -22,13 +24,21 @@ import { ShowMovieComponent } from './Content/show-movie/show-movie.component';
     BookingComponent,
     NavbarComponent,
     ShowMovieComponent,
+    LogoutComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+      domain: 'dev-7fda1vczp5yjz35s.us.auth0.com',
+      clientId: 'q9yFimGw8e9u96KCEuJmiZNbT2ZaQUB3',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
