@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@auth0/auth0-angular": "^2.2.2",
     "tslib": "^2.6.2"
   }
 }

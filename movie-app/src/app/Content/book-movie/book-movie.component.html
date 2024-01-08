@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="book-movie.component.css">
+
+<div *ngIf="movie">
+  <div class="movie-container">
+    <img class="image-container" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.original_title }} Poster" >
+    <div class="text-container">
+    <!--  <p class="title">{{ movie.original_title }}</p>
+      <p>{{ movie.overview }}</p>-->
+      <p>Release Date: {{ movie.release_date }}</p>
+      <input type="date">
+      <div class="seat-row" *ngFor="let row of seatsGrouped">
+        
+        <div *ngFor="let seat of row" (click)="selectSeat(seat)">
+          <img class="seat" [src]="'https://png.pngtree.com/png-vector/20220814/ourmid/pngtree-cinema-seat-png-image_6110496.png'"
+               [class.selected]="selectedSeats.includes(seat)">
+        </div>
+      </div>
+      <p>Total Amount: {{ calculateTotalAmount() }} MKD</p>
+      <button >Book Now</button>
+    </div>
+  </div>
+</div>
