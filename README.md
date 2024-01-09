@@ -16,7 +16,7 @@ Welcome to the Angular Cinema App! This application allows users to explore movi
 - View detailed information about each movie.
 - Log in and log out using a third-party website.
 - Access user profile.
-- Book seats for a specific movie on a chosen date.
+- Book seats for a specific movie on a chosen date and recieve email confirmation.
 
 ## Technologies Used
 
