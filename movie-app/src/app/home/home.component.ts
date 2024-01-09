@@ -2,6 +2,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { catchError, of } from 'rxjs';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { AuthService } from '@auth0/auth0-angular';
+
 
 @Component({
   selector: 'app-home',
@@ -14,12 +17,19 @@ export class HomeComponent implements OnInit {
   currentPage: number = 1;
   genres: any[] = [];
   selectedGenre?: number;
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: DataService, private router: Router, private userService: UserService, private auth: AuthService) { }
+
 
   ngOnInit() {
     this.loadData();
     this.dataService.getSearchTerm().subscribe(term => {
       this.filterData(term);
+    });
+
+    this.auth.user$.subscribe(user => {
+      if (user?.email) {
+        this.userService.setUserEmail(user.email);
+      }
     });
 
     this.dataService.fetchGenres().subscribe(
@@ -48,6 +58,7 @@ export class HomeComponent implements OnInit {
       }
     );
   } 
+
   updatePage(newPage: number) {
     this.currentPage = newPage;
     this.dataService.getSearchTerm().subscribe(term => {
@@ -55,25 +66,26 @@ export class HomeComponent implements OnInit {
       this.loadData(this.currentPage, term, genreId);
     });
   }
-
-
+  
+  
   onGenreChange() {
     this.currentPage = 1; // Reset to first page
     const genreId = this.selectedGenre ? this.selectedGenre : undefined;
     this.loadData(this.currentPage, undefined, genreId);
     this.updatePage(1);
   }
-
+  
 
   nextPage() {
     this.updatePage(this.currentPage + 1);
   }
-
+  
   previousPage() {
     if (this.currentPage > 1) {
       this.updatePage(this.currentPage - 1);
     }
   }
+  
 
   filterData(searchTerm: string) {
     if (!searchTerm) {
@@ -101,4 +113,3 @@ scrollToTop() {
 }
 
 }
-
