@@ -48,23 +48,30 @@ export class HomeComponent implements OnInit {
       }
     );
   } 
-  
+  updatePage(newPage: number) {
+    this.currentPage = newPage;
+    this.dataService.getSearchTerm().subscribe(term => {
+      const genreId = this.selectedGenre;
+      this.loadData(this.currentPage, term, genreId);
+    });
+  }
+
+
   onGenreChange() {
     this.currentPage = 1; // Reset to first page
     const genreId = this.selectedGenre ? this.selectedGenre : undefined;
     this.loadData(this.currentPage, undefined, genreId);
+    this.updatePage(1);
   }
-  
+
 
   nextPage() {
-    this.currentPage++;
-    this.loadData();
+    this.updatePage(this.currentPage + 1);
   }
 
   previousPage() {
     if (this.currentPage > 1) {
-      this.currentPage--;
-      this.loadData();
+      this.updatePage(this.currentPage - 1);
     }
   }
 
