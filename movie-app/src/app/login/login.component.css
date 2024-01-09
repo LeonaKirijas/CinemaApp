@@ -1,11 +1,12 @@
 button{
     position: absolute;
-    right: 15px;
-    top: 4px;
-    background-color: gray;
+    right: 600px;
+    top: 37px;
+    background-color: #eac38d;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 15px;
+    padding: 7px 11px;
     font-size: 15px;
+    cursor: pointer;
 }

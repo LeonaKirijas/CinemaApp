@@ -1,4 +1,14 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
 <link class="content" href="home.component.css">
+
+<select class="selector" [(ngModel)]="selectedGenre" (change)="onGenreChange()">
+  <option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</option>
+</select>
+
+
 
 <div *ngIf="filteredData" class="movie-grid">
   <div *ngFor="let movie of filteredData" class="movie-item">
@@ -8,3 +18,10 @@
     </div>
   </div>
 </div>
+<div class="btn-group">
+<button class="prev" (click)="previousPage()"><img width="50" height="50" src="https://img.icons8.com/ios/50/circled-left--v1.png" alt="circled-left--v1"/></button>
+<button class="next" (click)="nextPage()"><img width="50" height="50" src="https://img.icons8.com/ios/50/circled-right--v1.png" alt="circled-right--v1"/></button>
+</div>
+
+<button class="scroll prev" *ngIf="showScrollButton" (click)="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px;"><img width="50" height="50" src="https://img.icons8.com/ios/50/circled-up--v1.png" alt="circled-up--v1"/></button>
+

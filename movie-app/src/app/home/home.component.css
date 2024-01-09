@@ -20,14 +20,49 @@
   }
   
   .movie-poster {
-    width: 60%;
-    max-height: 300px;
+    width: 80%;
+    max-height: 340px;
     object-fit: cover;
-  }
-  
-  .movie-title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-top: 1px;
-    font-size: 14px;
+    border-radius: 10px;
   }
 
+  .movie-title {
+    font-family: 'Playfair Display', serif;
+    margin-top: 1px;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+.btn-group{
+  display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+}
+
+.prev{
+  border: none;
+    background-color: transparent;
+}
+
+.next{
+  border: none;
+    background-color: transparent;
+}
+
+.prev:hover{
+  cursor: pointer;
+}
+
+.next:hover{
+  cursor: pointer;
+}
+
+.selector{
+  position: absolute;
+  left: 730px;
+  top: 41px;
+  border: none;
+  border-radius: 7px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
