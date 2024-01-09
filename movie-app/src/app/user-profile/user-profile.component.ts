@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-user-profile',
   template: `
@@ -24,6 +25,13 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent {
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService, private userService: UserService) {
+    this.auth.user$.subscribe(user => {
+      if (user && user.email) {
+        this.userService.setUserEmail(user.email);
+      }
+    });
+  }
 }
+
 

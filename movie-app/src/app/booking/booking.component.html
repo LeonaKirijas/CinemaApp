@@ -5,7 +5,7 @@
     <div (click)="navigateToBookMovie(movie)">
       
 <a class="link" href="https://codepen.io/simoberny/pen/qxxOqj" target="_blank"></a>
-<div class="movie_card" id="bright" *ngIf="movie" [style.background]="'url(https://image.tmdb.org/t/p/w500/' + movie.backdrop_path + ')'">
+<div class="movie_card" id="bright" *ngIf="movie" [style.background]="'url(https://image.tmdb.org/t/p/w500/' + movie.backdrop_path + ') no-repeat center center / cover'">
   <div class="info_section">
     <div class="movie_header">
       <img class="locandina" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"/>

@@ -44,4 +44,22 @@ img {
   .selected {
     border: 2px solid #007BFF;
   }
-  
+  .button{
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 0.1px solid;
+    background-color: #eac38d;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .date-picker{
+    border-radius: 5px;
+    border: 0.1px solid;
+    color: white;
+    background-color: #eac38d;
+    padding: 10px 15px;
+    font-size: large;
+    font-weight: bold;
+  }

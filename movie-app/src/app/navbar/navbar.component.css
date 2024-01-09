@@ -1,15 +1,16 @@
 /* Your existing styles for the navbar */
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-    top: -8px;
-    width: 100.86%;
-    left: -8px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #eac38d;
+  position: relative;
+  top: 22px;
+  width: 760px;
+  left: 552px;
+  border-radius: 20px;
   }
   
   li {
@@ -24,18 +25,14 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  
+    
   .active {
     background-color: #04AA6D;
   }
 
   input{
     position: absolute;
-    right: 174px;
+    right: 146px;
     top: 11px;
     border: none;
     padding: 5px;
@@ -43,7 +40,7 @@ ul {
   }
   .img-user{
     position: absolute;
-    right: 104px;
+    right: 80px;
     top: -5px;
   }
 

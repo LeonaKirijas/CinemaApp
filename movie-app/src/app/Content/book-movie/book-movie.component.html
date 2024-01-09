@@ -7,7 +7,7 @@
     <!--  <p class="title">{{ movie.original_title }}</p>
       <p>{{ movie.overview }}</p>-->
       <p>Release Date: {{ movie.release_date }}</p>
-      <input type="date">
+      <input class="date-picker" type="date">
       <div class="seat-row" *ngFor="let row of seatsGrouped">
         
         <div *ngFor="let seat of row" (click)="selectSeat(seat)">
@@ -16,7 +16,7 @@
         </div>
       </div>
       <p>Total Amount: {{ calculateTotalAmount() }} MKD</p>
-      <button >Book Now</button>
+      <button class="button" (click)="sendEmail()">Book Now</button>
     </div>
   </div>
 </div>
