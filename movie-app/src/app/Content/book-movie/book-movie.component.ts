@@ -63,8 +63,11 @@ export class BookMovieComponent implements OnInit {
     }
 
     const templateParams = {
-      message: "Your seat is booked",
-      email: this.userEmail // Use the retrieved email
+      user_name: this.userEmail, // Assuming you have the user's name
+      user_email: this.userEmail, // The user's email
+      movie_title: this.movie.title, // Assuming you have the movie's title
+      seats_booked: this.selectedSeats.join(", "), // Assuming you have the selected seats
+      total_amount: this.calculateTotalAmount()
     };
 
     emailjs.send('Movie-Booking', 'template_0pxo2mf', templateParams)
